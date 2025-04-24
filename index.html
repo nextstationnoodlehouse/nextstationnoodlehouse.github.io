@@ -95,25 +95,44 @@
       </div>
     </section>
 
-    <!-- 5) VIDEO GALLERY -->
-    <section id="videos" class="video-gallery">
-      <div class="container grid-2">
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/xBog3lSnsDc"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div class="video">
-          <iframe
-            src="https://www.youtube.com/embed/G8PafJHGuoU"
-            allowfullscreen
-            loading="lazy"
-          ></iframe>
-        </div>
-      </div>
-    </section>
+<!-- 5) VIDEO GALLERY -->
+<section id="videos" class="video-gallery">
+  <div class="container grid-2">
+    <!-- First video stays YouTube -->
+    <div class="video">
+      <iframe
+        src="https://www.youtube.com/embed/iVyxgAplCuM?si=tIHJJkQqtpttcHSM"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- Second video becomes TikTok -->
+    <div class="video">
+      <!-- TikTok embed -->
+      <blockquote
+        class="tiktok-embed"
+        cite="https://www.tiktok.com/@ycchichichi/video/7433062356286000391"
+        data-video-id="7433062356286000391"
+        style="max-width: 605px; min-width: 325px; width: 100%;"
+      >
+        <section>
+          <a
+            target="_blank"
+            title="@ycchichichi"
+            href="https://www.tiktok.com/@ycchichichi?refer=embed"
+            >@ycchichichi</a
+          >
+          【晚餐】真材实料番茄上汤面🍅家乡人情味…
+        </section>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- Include TikTok’s embed script once (ideally right before </body>) -->
+<script async src="https://www.tiktok.com/embed.js"></script>
+
 
     <!-- 6) FEATURED PRODUCTS -->
     <section id="featured" class="featured-products">
