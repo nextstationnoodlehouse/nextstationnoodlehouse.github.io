@@ -299,3 +299,25 @@ footer a {
   .grid-3 { grid-template-columns: 1fr; }
   .flex { flex-direction: column; }
 }
+
+/*────────────────────────────────────────
+  Prevent horizontal overflow & allow shrink
+────────────────────────────────────────*/
+html, body {
+  overflow-x: hidden;
+}
+.grid-2 > *,
+.grid-4 > * {
+  min-width: 0;
+}
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-4 {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .video blockquote {
+    min-width: 0 !important;
+  }
+}
