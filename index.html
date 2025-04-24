@@ -1,20 +1,37 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Next Station Noodle House</title>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Poppins:400,700|Montserrat:400,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Your custom styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- 1) HEADER / NAV -->
   <header>
-    <div class="container header-container">
-      <div class="logo">Next Station Noodle House</div>
+    <div class="container header-inner">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Next Station Noodle House">
+      </div>
       <nav>
-        <ul class="nav-list">
+        <ul>
+          <li><a href="#home">Home</a></li>
           <li><a href="#menu">Menu</a></li>
-          <li><a href="#location">Location</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#features">What We Serve</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#stats">Stats</a></li>
+          <li><a href="#blog">News</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -22,54 +39,179 @@
   </header>
 
   <main>
-    <section class="hero">
+
+    <!-- 2) HERO VIDEO -->
+    <section id="home" class="hero">
+      <video class="hero-video" autoplay loop muted playsinline>
+        <source src="assets/hero.mp4" type="video/mp4">
+      </video>
       <div class="hero-overlay"></div>
       <div class="hero-content">
-        <h1>Welcome to Next Station</h1>
-        <p>Authentic Hakka noodles &amp; rich soup broths</p>
-        <a class="btn" href="#menu">Explore Menu</a>
+        <h4>THE FUTURE OF TRADITION</h4>
+        <h1>Next Station Noodle House</h1>
+        <p>Serving Authentic Hakka Noodles & Rich Soup Broths</p>
       </div>
     </section>
 
-    <section id="menu" class="container">
-      <h2>Our Specialties</h2>
-      <div class="menu-grid">
-        <div class="menu-item">
-          <img src="assets/tomato-soup-noodle.jpg" alt="Tomato Soup Noodle">
-          <h3>Tomato Soup Noodle</h3>
-          <p>Tangy homemade tomato broth with springy noodles.</p>
+    <!-- 3) OUR STORY -->
+    <section id="story" class="story">
+      <div class="container flex">
+        <div class="story-image">
+          <img src="assets/our-story.jpg" alt="Our Story">
         </div>
-        <div class="menu-item">
-          <img src="assets/hakka-noodle.jpg" alt="Hakka Noodle">
-          <h3>Hakka Noodle</h3>
-          <p>Traditional Hakka noodles with savory minced meat sauce.</p>
-        </div>
-        <div class="menu-item">
-          <img src="assets/ginger-wine-soup.jpg" alt="Ginger Wine Chicken Soup">
-          <h3>Ginger Wine Chicken Soup</h3>
-          <p>Warming broth infused with ginger and rice wine.</p>
+        <div class="story-text">
+          <h4>OUR STORY</h4>
+          <h2>It’s all happening here with our special broth recipe</h2>
+          <p>
+            Established in 2022, Next Station Noodle House is committed to
+            delivering an unforgettable dining experience. Try our signature
+            soup steeped for hours, paired with noodles brought in from
+            the heart of Jiangxi.
+          </p>
+          <a href="#menu" class="btn">Learn More</a>
         </div>
       </div>
     </section>
 
-    <section id="location" class="container">
-      <h2>Find Us</h2>
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.870644944789!2d101.61836477584414!3d3.1288782532751007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49199a39b59f%3A0x59aeb2bf3f01781c!2z55m-5a625p2R6Z2i6aaGIHwgTmV4dCBTdGF0aW9uIE5vb2RsZSBIb3VzZSB8IERhbWFuc2FyYSBKYXlh!5e0!3m2!1sen!2smy!4v1745479960633!5m2!1sen!2smy"
-          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <!-- 4) QUICK FEATURES -->
+    <section id="features" class="features">
+      <div class="container grid-4">
+        <div class="feature">
+          <img src="assets/icons/noodles.svg" alt="">
+          <h4>SOUP NOODLES</h4>
+        </div>
+        <div class="feature">
+          <img src="assets/icons/pan-mee.svg" alt="">
+          <h4>PAN MEE</h4>
+        </div>
+        <div class="feature">
+          <img src="assets/icons/snacks.svg" alt="">
+          <h4>SNACKS</h4>
+        </div>
+        <div class="feature">
+          <img src="assets/icons/drinks.svg" alt="">
+          <h4>BEVERAGES</h4>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="container">
-      <h2>Contact &amp; Order</h2>
-      <p>WhatsApp us at <a href="https://wa.me/60123456789">+60 12-345 6789</a></p>
+    <!-- 5) VIDEO GALLERY -->
+    <section id="videos" class="video-gallery">
+      <div class="container grid-2">
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/xBog3lSnsDc"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="video">
+          <iframe
+            src="https://www.youtube.com/embed/G8PafJHGuoU"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
     </section>
+
+    <!-- 6) FEATURED PRODUCTS -->
+    <section id="featured" class="featured-products">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div class="grid-4">
+          <div class="product">
+            <h3>Bursting Meatball Mi Xian</h3>
+            <img src="assets/products/meatball-mi-xian.jpg" alt="">
+          </div>
+          <div class="product">
+            <h3>Hakka Sauce Pan Mee</h3>
+            <img src="assets/products/hakka-pan-mee.jpg" alt="">
+          </div>
+          <div class="product">
+            <h3>Trio Platter</h3>
+            <img src="assets/products/trio-platter.jpg" alt="">
+          </div>
+          <div class="product">
+            <h3>GO Drinks</h3>
+            <img src="assets/products/go-drinks.jpg" alt="">
+          </div>
+        </div>
+        <a href="#menu" class="btn">Browse Full Menu</a>
+      </div>
+    </section>
+
+    <!-- 7) KEY STATS -->
+    <section id="stats" class="stats">
+      <div class="container grid-3">
+        <div class="stat">
+          <h3>Perfect Noodle<br><span>Since 2022</span></h3>
+        </div>
+        <div class="stat">
+          <h3>Over<br><span>30+</span> Outlets</h3>
+        </div>
+        <div class="stat">
+          <h3>25M+<br>Bowls Served</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8) NEWS & MEDIA -->
+    <section id="blog" class="news">
+      <div class="container">
+        <h2>Media Highlights</h2>
+        <h4>Latest News</h4>
+        <div class="grid-3">
+          <!-- Repeat for each post -->
+          <article class="post">
+            <img src="assets/blog/post1.jpg" alt="">
+            <h3>Pickleball Paddle Lucky Draw – Dine & Win!</h3>
+            <p class="date">Apr 3, 2025</p>
+            <a href="#" class="more">Read More</a>
+          </article>
+          <!-- … -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 9) CONTACT & FOOTER -->
+    <footer id="contact">
+      <div class="container footer-top grid-4">
+        <div class="newsletter">
+          <h3>Subscribe to Newsletter</h3>
+          <form>
+            <input type="email" placeholder="Your email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <div class="quick-links">
+          <h4>Quick Menu</h4>
+          <ul>
+            <li><a href="#story">About Us</a></li>
+            <li><a href="#menu">Restaurant Menu</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+        <div class="help">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="social">
+          <h4>Follow Us</h4>
+          <a href="#" class="icon">Facebook</a>
+          <a href="#" class="icon">Instagram</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Next Station Noodle House · Damansara Jaya, PJ</p>
+      </div>
+    </footer>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 Next Station Noodle House · Damansara Jaya, Petaling Jaya</p>
-  </footer>
 </body>
 </html>
