@@ -1,47 +1,56 @@
 /* styles.css */
 :root {
   --primary: #ffd700;
-  --bg: #000000;
-  --text: #ffffff;
+  --bg: #000;
+  --text: #fff;
 }
-*, *::before, *::after {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
-html {
   box-sizing: border-box;
-  font-size: 100%;
 }
 body {
+  font-family: Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 header {
-  position: fixed;
-  top: 0;
-  width: 100%;
   background: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  z-index: 10;
+  padding: 1rem;
 }
 .logo {
-  font-size: 1.75rem;
-  color: var(--primary);
+  font-size: 1.5rem;
   font-weight: bold;
+  color: var(--primary);
 }
-nav a {
-  margin-left: 1.5rem;
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+.nav-list li + li {
+  margin-left: 1rem;
+}
+.nav-list a {
   color: var(--text);
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s;
 }
-nav a:hover {
+.nav-list a:hover {
   color: var(--primary);
 }
 .hero {
@@ -55,12 +64,11 @@ nav a:hover {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
 }
 .hero-content {
   position: relative;
   text-align: center;
-  padding: 0 1rem;
 }
 .hero-content h1 {
   font-size: 3rem;
@@ -80,41 +88,33 @@ nav a:hover {
   font-weight: bold;
   border-radius: 4px;
 }
-section {
-  padding: 6rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-#menu h2,
-#location h2,
-#contact h2 {
-  font-size: 2.25rem;
+h2 {
+  font-size: 2rem;
   color: var(--primary);
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin: 2rem 0;
 }
 .menu-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 .menu-item {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
   border-radius: 8px;
-  overflow: hidden;
   text-align: center;
 }
 .menu-item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 4px;
 }
 .menu-item h3 {
   margin: 1rem 0 0.5rem;
-  font-size: 1.25rem;
 }
 .menu-item p {
-  margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 .map-container iframe {
@@ -123,17 +123,14 @@ section {
   border: 0;
   border-radius: 8px;
 }
-#contact p a {
-  color: var(--primary);
-  text-decoration: none;
-}
 footer {
+  background: var(--bg);
   text-align: center;
-  padding: 2rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
   margin-top: 2rem;
 }
 footer p {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255,255,255,0.7);
   font-size: 0.9rem;
 }
