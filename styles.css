@@ -388,6 +388,7 @@ html, body { overflow-x: hidden; }
   PORK-HERO BREAK-OUT FULLSCREEN
 ────────────────────────────────────────*/
 .pork-hero {
+  /* existing break-out rules… */
   position: relative;
   left: 50%;
   right: 50%;
@@ -398,7 +399,12 @@ html, body { overflow-x: hidden; }
   overflow: hidden;
   display: flex;
   align-items: center;
-  background: var(--dark);
+  justify-content: center;
+
+  /* prevent tiling and scale to cover */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .pork-hero .container {
