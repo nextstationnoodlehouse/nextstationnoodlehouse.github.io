@@ -90,53 +90,54 @@
     </section>
 
    <!-- 5) VIDEO GALLERY -->
-  <section id="videos" class="video-gallery">
-    <!-- Carousel wrapper -->
-    <div class="tiktok-carousel">
-      <!-- First TikTok -->
-      <div class="tiktok-item video">
-        <blockquote
-          class="tiktok-embed"
-          cite="https://www.tiktok.com/@ycchichichi/video/7433062356286000391"
-          data-video-id="7433062356286000391"
-          style="max-width: 605px; width: 100%; min-width: 0;"
-        >
-          <section>
-            <a
-              target="_blank"
-              title="@ycchichichi"
-              href="https://www.tiktok.com/@ycchichichi?refer=embed"
-              >@ycchichichi</a
-            >
-            【晚餐】真材实料番茄上汤面🍅家乡人情味…
-          </section>
-        </blockquote>
-      </div>
-
-      <!-- Second TikTok -->
-      <div class="tiktok-item video">
-        <blockquote
-          class="tiktok-embed"
-          cite="https://www.tiktok.com/@foodtravelplaykl/video/7444939142758157586"
-          data-video-id="7444939142758157586"
-          style="max-width: 605px; width: 100%; min-width: 0;"
-        >
-          <section>
-            <a
-              target="_blank"
-              title="@foodtravelplaykl"
-              href="https://www.tiktok.com/@foodtravelplaykl?refer=embed"
-              >@foodtravelplaykl</a
-            >
-            9块钱的番茄汤面…走咯，吃面去🍜！
-          </section>
-        </blockquote>
-      </div>
+<section id="videos" class="video-gallery">
+  <!-- Carousel wrapper -->
+  <div class="tiktok-carousel">
+    <!-- First TikTok -->
+    <div class="tiktok-item video">
+      <blockquote
+        class="tiktok-embed"
+        cite="https://www.tiktok.com/@ycchichichi/video/7433062356286000391"
+        data-video-id="7433062356286000391"
+        style="max-width: 605px; width: 100%; min-width: 0;"
+      >
+        <section>
+          <a
+            target="_blank"
+            title="@ycchichichi"
+            href="https://www.tiktok.com/@ycchichichi?refer=embed"
+            >@ycchichichi</a
+          >
+          【晚餐】真材实料番茄上汤面🍅家乡人情味…
+        </section>
+      </blockquote>
     </div>
-  </section>
 
-  <!-- TikTok embed script (only once per page!) -->
-  <script async src="https://www.tiktok.com/embed.js"></script>
+    <!-- Second TikTok -->
+    <div class="tiktok-item video">
+      <blockquote
+        class="tiktok-embed"
+        cite="https://www.tiktok.com/@foodtravelplaykl/video/7444939142758157586"
+        data-video-id="7444939142758157586"
+        style="max-width: 605px; width: 100%; min-width: 0;"
+      >
+        <section>
+          <a
+            target="_blank"
+            title="@foodtravelplaykl"
+            href="https://www.tiktok.com/@foodtravelplaykl?refer=embed"
+            >@foodtravelplaykl</a
+          >
+          9块钱的番茄汤面…走咯，吃面去🍜！
+        </section>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- TikTok embed script (only once per page!) -->
+<script async src="https://www.tiktok.com/embed.js"></script>
+
 
     <!-- 6) FEATURED PRODUCTS -->
     <section id="featured" class="featured-products">
@@ -160,8 +161,7 @@
             <img src="assets/products/go-drinks.jpg" alt="">
           </div>
         </div>
-        <!-- changed to trigger modal -->
-        <a href="#" id="openMenu" class="btn">Browse Full Menu</a>
+        <a href="#menu" class="btn">Browse Full Menu</a>
       </div>
     </section>
 
@@ -237,35 +237,5 @@
 
   </main>
 
-  <!-- MENU MODAL -->
-  <div id="menuModal" class="modal">
-    <div class="modal-content">
-      <span class="modal-close">&times;</span>
-      <iframe
-        src="https://business.google.com/v/_/010682899734435385593/41b4/_/fullmenu/"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById('menuModal');
-    const openBtn = document.getElementById('openMenu');
-    const closeBtn = modal.querySelector('.modal-close');
-
-    openBtn.addEventListener('click', e => {
-      e.preventDefault();
-      modal.style.display = 'block';
-    });
-    closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
-    });
-    modal.addEventListener('click', e => {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 </html>
