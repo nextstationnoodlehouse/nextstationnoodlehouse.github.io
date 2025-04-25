@@ -4,90 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pork Noodle | Next Station Noodle House</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
-  <style>
-    /* Reset & Variables */
-    :root {
-      --primary: #FFD700;
-      --dark: #000000;
-      --light: #FFFFFF;
-      --font-sans: 'PT Sans', sans-serif;
-      --font-alt: 'Poppins', sans-serif;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: var(--font-sans); color: var(--light); background: var(--dark); line-height: 1.5; }
-    a { text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    .container { width: 90%; max-width: 1200px; margin: auto; }
-
-    /* Header */
-    header { padding: 1rem 0; }
-    .logo img { height: 60px; }
-    nav ul { list-style: none; display: flex; gap: 1.5rem; }
-    nav a { color: var(--light); font-weight: 700; }
-    nav a:hover { color: var(--primary); }
-
-    /* Hero */
-    .hero { display: flex; align-items: center; justify-content: space-between; padding: 4rem 0; }
-    .hero-text h1 { font-size: 3rem; font-family: var(--font-alt); color: var(--primary); margin-bottom: 1rem; }
-    .hero-text p { font-size: 1.125rem; margin-bottom: 2rem; }
-    .btn { display: inline-block; background: var(--primary); color: var(--dark); padding: 0.75rem 1.5rem; font-weight: bold; border-radius: 4px; }
-    .hero-img { flex: 1; text-align: right; }
-    .hero-img img { width: 80%; border-radius: 8px; }
-
-    /* About Dish */
-    .about { background: var(--light); color: var(--dark); padding: 4rem 0; }
-    .about .container { display: flex; align-items: center; gap: 2rem; }
-    .about-text h2 { font-size: 2rem; margin-bottom: 1rem; }
-    .about-text p { margin-bottom: 1rem; }
-
-    /* Features */
-    .features { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; padding: 4rem 0; }
-    .feature { flex: 1 1 200px; text-align: center; }
-    .feature img { width: 80px; margin-bottom: 1rem; }
-    .feature h4 { margin-bottom: 0.5rem; }
-
-    /* Testimonials */
-    .testimonials { padding: 4rem 0; }
-    .testimonial { background: #111; padding: 2rem; border-radius: 8px; max-width: 600px; margin: auto; text-align: center; }
-    .testimonial p { margin-bottom: 1rem; font-style: italic; }
-    .testimonial .author { font-weight: bold; color: var(--primary); }
-
-    /* CTA */
-    .cta { background: var(--primary); color: var(--dark); padding: 2rem 0; text-align: center; }
-    .cta input[type="email"] { padding: 0.75rem; width: 250px; border: none; border-radius: 4px; margin-right: 0.5rem; }
-    .cta button { padding: 0.75rem 1.5rem; background: var(--dark); color: var(--light); border: none; border-radius: 4px; font-weight: bold; }
-
-    /* Footer */
-    footer { background: #111; color: var(--light); padding: 2rem 0; text-align: center; font-size: 0.9rem; }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero { flex-direction: column-reverse; text-align: center; }
-      .hero-img, .hero-text { width: 100%; }
-      .about .container { flex-direction: column; }
-      nav ul { justify-content: center; flex-wrap: wrap; }
-      .features { flex-direction: column; align-items: center; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Poppins:400,700|Montserrat:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="container">
-    <div class="logo"><img src="assets/logo.png" alt="Next Station Noodle House"></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#menu">Menu</a></li>
-        <li><a href="index.html#story">Our Story</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <!-- 1) HEADER / NAV -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="index.html"><img src="assets/logo.png" alt="Next Station Noodle House"></a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#menu">Menu</a></li>
+          <li><a href="index.html#story">Our Story</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero container">
+
+    <!-- Hero Section -->
+    <section class="pork-hero container">
       <div class="hero-text">
         <h1>Pork Noodle</h1>
         <p>Rich pork broth, tender pork collar & fresh handmade noodles—your new favorite bowl.</p>
@@ -100,7 +42,7 @@
 
     <!-- About Dish -->
     <section class="about">
-      <div class="container">
+      <div class="container flex">
         <div class="about-img">
           <img src="assets/pork-noodle-about.jpg" alt="About Pork Noodle">
         </div>
@@ -113,43 +55,54 @@
     </section>
 
     <!-- Features -->
-    <section class="features container">
-      <div class="feature">
-        <img src="assets/icons/pork-collar.png" alt="Pork Collar">
-        <h4>Premium Pork Collar</h4>
-      </div>
-      <div class="feature">
-        <img src="assets/icons/noodles.png" alt="Handmade Noodles">
-        <h4>Handmade Noodles</h4>
-      </div>
-      <div class="feature">
-        <img src="assets/icons/broth.png" alt="Rich Broth">
-        <h4>8‑Hr Rich Broth</h4>
-      </div>
-      <div class="feature">
-        <img src="assets/icons/fresh-herbs.png" alt="Fresh Herbs">
-        <h4>Fresh Scallions</h4>
+    <section class="features">
+      <div class="container flex">
+        <div class="feature">
+          <img src="assets/icons/pork-collar.png" alt="Pork Collar">
+          <h4>Premium Pork Collar</h4>
+        </div>
+        <div class="feature">
+          <img src="assets/icons/noodles.png" alt="Handmade Noodles">
+          <h4>Handmade Noodles</h4>
+        </div>
+        <div class="feature">
+          <img src="assets/icons/broth.png" alt="Rich Broth">
+          <h4>8-Hr Rich Broth</h4>
+        </div>
+        <div class="feature">
+          <img src="assets/icons/fresh-herbs.png" alt="Fresh Herbs">
+          <h4>Fresh Scallions</h4>
+        </div>
       </div>
     </section>
 
     <!-- Testimonial -->
     <section class="testimonials">
-      <div class="testimonial">
-        <p>“The pork noodle here is out of this world—deep, savory broth and noodles so bouncy.”</p>
-        <div class="author">– James Wong</div>
+      <div class="container">
+        <div class="testimonial">
+          <p>“The pork noodle here is out of this world—deep, savory broth and noodles so bouncy.”</p>
+          <div class="author">– James Wong</div>
+        </div>
       </div>
     </section>
 
     <!-- Call to Action -->
     <section class="cta">
-      <p>Craving Pork Noodle? Get exclusive offers & updates:</p>
-      <input type="email" placeholder="Your email address">
-      <button type="button">Sign Up</button>
+      <div class="container">
+        <p>Craving Pork Noodle? Get exclusive offers & updates:</p>
+        <input type="email" placeholder="Your email address">
+        <button type="button">Sign Up</button>
+      </div>
     </section>
+
   </main>
 
+  <!-- 9) FOOTER -->
   <footer>
-    <p>© 2025 Next Station Noodle House · Damansara Jaya, PJ</p>
+    <div class="container footer-bottom">
+      <p>© 2025 Next Station Noodle House · Damansara Jaya, PJ</p>
+    </div>
   </footer>
+
 </body>
 </html>
