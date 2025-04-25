@@ -172,6 +172,47 @@ nav a:hover { color: var(--primary); }
 }
 
 /*────────────────────────────────────────
+  5.1) TikTok Carousel Overrides
+────────────────────────────────────────*/
+@media (min-width: 769px) {
+  /* keep desktop grid */
+  .tiktok-carousel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* switch to swipe-able row */
+  .tiktok-carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+  .tiktok-carousel::-webkit-scrollbar {
+    height: 6px;
+  }
+  .tiktok-carousel::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+  }
+
+  .tiktok-item {
+    flex: 0 0 80%;
+    margin-right: 16px;
+    scroll-snap-align: start;
+  }
+  .tiktok-item:last-child {
+    margin-right: 0;
+  }
+}
+
+
+/*────────────────────────────────────────
   6) FEATURED PRODUCTS
 ────────────────────────────────────────*/
 .featured-products {
