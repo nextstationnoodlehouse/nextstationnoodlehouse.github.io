@@ -42,14 +42,8 @@
   <h4>THE HARMONY OF BROTHS</h4>
   <h1>Pork Noodle</h1>
   <p>Rich pork broth, tender pork collar &amp; fresh handmade noodles—your new favorite bowl.</p>
-<a
-  href="https://business.google.com/v/_/…/fullmenu/"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="btn"
->
-  View Full Menu
-</a>
+<a href="#" id="openMenu" class="btn">View Full Menu</a>
+        
     href="https://maps.app.goo.gl/JyTFEAsN4JpWXhrz6"
     target="_blank"
     rel="noopener noreferrer"
@@ -136,5 +130,34 @@
       <p>© 2025 Next Station Noodle House · Damansara Jaya, PJ</p>
     </div>
   </footer>
+  <!-- MENU MODAL -->
+<div id="menuModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    <iframe
+      src="https://business.google.com/v/_/010682899734435385593/41b4/_/fullmenu/"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('menuModal');
+  const openBtn = document.getElementById('openMenu');
+  const closeBtn = modal.querySelector('.modal-close');
+
+  openBtn.addEventListener('click', e => {
+    e.preventDefault();
+    modal.style.display = 'block';
+  });
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+</script>
+
 </body>
 </html>
