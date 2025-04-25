@@ -416,3 +416,68 @@ html, body {
 .grid-4 > * {
   min-width: 0;
 }
+
+/*────────────────────────────────────────
+  PORK NOODLE LANDING PAGE STYLES
+────────────────────────────────────────*/
+.pork-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+.pork-hero .hero-text h1 {
+  font-size: 3rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.pork-hero .hero-text p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+.pork-hero .btn {
+  background: var(--primary);
+  color: var(--dark);
+}
+.pork-hero .hero-img img {
+  width: 80%;
+  border-radius: 8px;
+}
+
+.about {
+  background: var(--light);
+  color: var(--dark);
+  padding: 4rem 0;
+}
+.about .container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.testimonials {
+  padding: 4rem 0;
+}
+.testimonial {
+  background: #111;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+.testimonial p {
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+.testimonial .author {
+  font-weight: bold;
+  color: var
