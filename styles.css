@@ -168,6 +168,10 @@ nav a:hover { color: var(--primary); }
 
 .feature img:hover {
   transform: scale(1.1);
+
+.feature h4 {
+  color: #000000; /* makes all feature titles black */
+  font-weight: 700;
 }
 
 /*────────────────────────────────────────
