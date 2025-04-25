@@ -385,7 +385,7 @@ html, body { overflow-x: hidden; }
 .grid-2 > *, .grid-4 > * { min-width: 0; }
 
 /*────────────────────────────────────────
-  PORK NOODLE HERO BREAK-OUT FULLSCREEN
+  PORK-HERO BREAK-OUT FULLSCREEN
 ────────────────────────────────────────*/
 .pork-hero {
   position: relative;
@@ -395,23 +395,54 @@ html, body { overflow-x: hidden; }
   margin-right: -50vw;
   width: 100vw;
   height: 100vh;
-  padding: 0;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  background: var(--dark);
 }
-.pork-hero .hero-text,
+
+.pork-hero .container {
+  /* restore your normal container constraints for layout inside the hero */
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.pork-hero .hero-text {
+  flex: 1;
+  color: var(--light);
+}
+
+.pork-hero .hero-text h4 {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  margin-bottom: .5rem;
+}
+
+.pork-hero .hero-text h1 {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: .5rem;
+}
+
+.pork-hero .hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
 .pork-hero .hero-img {
   flex: 1;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
 }
-.pork-hero .hero-text {
-  max-width: 40%;
-}
+
 .pork-hero .hero-img img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  max-width: 600px;
   border-radius: 8px;
+  object-fit: cover;
 }
