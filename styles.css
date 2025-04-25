@@ -426,3 +426,35 @@ html, body {
     text-align: center;
   }
 }
+/*────────────────────────────────────────
+  Mobile: Compact Header Nav
+────────────────────────────────────────*/
+@media (max-width: 768px) {
+  header .header-inner {
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 0.5rem;                /* tighter spacing */
+    font-size: 0.9rem;          /* smaller text */
+    overflow-x: auto;           /* allow horizontal scroll */
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;        /* keep items on one line */
+    padding-bottom: 0.5rem;     /* room for scrollbar */
+  }
+
+  nav li {
+    flex: 0 0 auto;             /* prevent wrapping */
+  }
+
+  nav a {
+    padding: 0.25rem 0.5rem;     /* smaller tap targets */
+  }
+
+  /* Optional: hide the scrollbar for a cleaner look */
+  nav ul::-webkit-scrollbar {
+    display: none;
+  }
+}
+
