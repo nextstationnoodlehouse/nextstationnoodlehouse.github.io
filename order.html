@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Online - Next Station Noodle House</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner container">
+      <a href="index.html"><img src="assets/logo.png" alt="Next Station Noodle House logo"></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="order.html" class="active">Order</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ORDER PAGE MAIN -->
+  <main class="order-page container">
+    <!-- MENU / ITEMS LIST -->
+    <section class="menu-items">
+      <h2>Our Menu</h2>
+      <div class="items-list" id="items-list"></div>
+    </section>
+
+    <!-- CART / SUMMARY -->
+    <aside class="order-summary">
+      <h2>Your Cart</h2>
+      <ul class="cart-list" id="cart-list"></ul>
+      <div class="cart-total">
+        <span>Total:</span>
+        <span class="total-amount" id="total-amount">RM0.00</span>
+      </div>
+      <button class="checkout-btn" id="checkout-btn">Checkout</button>
+    </aside>
+  </main>
+
+  <!-- ORDER LOGIC -->
+  <script>
+    // Define your full menu here; adjust names, descriptions, prices, and image paths as needed
+    const menuItems = [
+      { id: 1, name: 'Tomato Soup Noodle', desc: 'Rich tomato broth, house-made goodness.', price: 12.9, img: 'assets/tomato_soup_noodle.jpg' },
+      { id: 2, name: 'Ginger Wine Chicken Soup', desc: 'Warm ginger wine chicken soup.', price: 15.9, img: 'assets/ginger_wine_chicken_soup.jpg' },
+      { id: 3, name: 'Hakka Char Siu Noodles', desc: 'Springy noodles tossed in savory sauce.', price: 14.5, img: 'assets/hakka_char_siu_noodles.jpg' },
+      { id: 4, name: 'Dry Pan Mee', desc: 'Hand-pulled noodles with chili flakes.', price: 11.5, img: 'assets/dry_pan_mee.jpg' },
+      { id: 5, name: 'Soup Pan Mee', desc: 'Comforting broth and noodles.', price: 12.5, img: 'assets/soup_pan_mee.jpg' },
+      { id: 6, name: 'Pork Noodle', desc: 'Rich pork broth with slices of pork collar.', price: 13.0, img: 'assets/pork_noodle.jpg' },
+      { id: 7, name: 'Chicken Rice', desc: 'Fragrant Hainanese chicken rice.', price: 10.9, img: 'assets/chicken_rice.jpg' },
+      // Add more items from your Google Business menu here
+    ];
+
+    // DOM references
+    const itemsListEl = document.getElementById('items-list');
+    const cartListEl = document.getElementById('cart-list');
+    const totalAmountEl = document.getElementById('total-amount');
+    const cart = [];
+
+    // Format price as RMxx.xx
+    function formatPrice(p) {
+      return 'RM' + p.toFixed(2);
+    }
+
+    // Render menu items dynamically
+    function renderMenu() {
+      menuItems.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'item-card';
+        card.innerHTML = `
+          <img src="${item.img}" alt="${item.name}">
+          <h4>${item.name}</h4>
+          <p>${item.desc}</p>
+          <div class="item-controls">
+            <span class="price">${formatPrice(item.price)}</span>
+            <button class="add-btn" data-id="${item.id}">Add to Cart</button>
+          </div>
+        `;
+        itemsListEl.appendChild(card);
+      });
+
+      document.querySelectorAll('.add-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          addToCart(parseInt(btn.dataset.id));
+        });
+      });
+    }
+
+    // Add item to cart
+    function addToCart(id) {
+      const found = cart.find(i => i.id === id);
+      if (found) found.qty++;
+      else cart.push({ ...menuItems.find(i => i.id === id), qty: 1 });
+      renderCart();
+    }
+
+    // Render cart contents and total
+    function renderCart() {
+      cartListEl.innerHTML = '';
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price * item.qty;
+        const li = document.createElement('li');
+        li.innerHTML = `${item.name} x ${item.qty} <span>${formatPrice(item.price * item.qty)}</span>`;
+        cartListEl.appendChild(li);
+      });
+      totalAmountEl.textContent = formatPrice(total);
+    }
+
+    // Checkout button handler
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+      alert('Proceed to checkout with total ' + totalAmountEl.textContent);
+    });
+
+    // Initialize
+    renderMenu();
+  </script>
+</body>
+</html>
