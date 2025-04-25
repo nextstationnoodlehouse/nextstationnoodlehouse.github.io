@@ -143,17 +143,31 @@ nav a:hover { color: var(--primary); }
 /*────────────────────────────────────────
   4) FEATURES
 ────────────────────────────────────────*/
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #ffffff; /* ensures white background */
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.feature {
+  flex: 0 1 220px; /* controls the width of each card */
+}
+
 .feature img {
   width: 250px;
   max-width: 100%;
   height: auto;
   margin-bottom: 1.2rem;
-  transition: transform 0.4s ease-in-out; /* smooth animation */
+  transition: transform 0.4s ease-in-out;
   display: inline-block;
 }
 
 .feature img:hover {
-  transform: scale(1.1); /* slowly enlarge to 110% */
+  transform: scale(1.1);
 }
 
 /*────────────────────────────────────────
