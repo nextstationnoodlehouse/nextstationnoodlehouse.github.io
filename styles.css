@@ -457,4 +457,39 @@ html, body {
     display: none;
   }
 }
+/*────────────────────────────────────────
+  Mobile: Slim Header + Scrollable Nav Fix
+────────────────────────────────────────*/
+@media (max-width: 768px) {
+  /* 1) Shrink the logo */
+  header img {
+    height: 50px !important;
+  }
+
+  /* 2) Allow the header to wrap onto two lines if needed */
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  /* 3) Make the nav flex container full-width and scrollable */
+  nav {
+    flex: 1 1 100%;
+    overflow: visible; /* ensure child can overflow */
+  }
+  nav ul {
+    display: flex;
+    width: max-content;         /* let it grow wider than its parent */
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+  }
+
+  /* 4) Smaller tap areas on the links */
+  nav a {
+    padding: 0.25rem 0.5rem !important;
+  }
+}
 
