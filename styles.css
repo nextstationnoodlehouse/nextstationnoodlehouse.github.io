@@ -452,3 +452,75 @@ html, body { overflow-x: hidden; }
   border-radius: 8px;
   object-fit: cover;
 }
+
+/*────────────────────────────────────────
+  FIX: Restore pork-hero text centering
+────────────────────────────────────────*/
+.pork-hero {
+  /* revert to a block-level container for background */
+  display: block !important;
+}
+
+.pork-hero .hero-content {
+  /* absolute center as before */
+  position: absolute !important;
+  top: 50%    !important;
+  left: 50%   !important;
+  transform: translate(-50%, -50%) !important;
+  text-align: center;
+  max-width: 90%;
+  width: 100%;
+  padding: 0 1rem;
+  color: var(--light);
+}
+
+/* wipe out unused hero-text / hero-img rules */
+.pork-hero .hero-text,
+.pork-hero .hero-img,
+.pork-hero .container {
+  all: unset;
+}
+
+/*────────────────────────────────────────
+  (keep your existing container/reset/grid/etc above)
+────────────────────────────────────────*/
+/*────────────────────────────────────────
+  PORK-HERO RESPONSIVE (MOBILE-FRIENDLY)
+────────────────────────────────────────*/
+@media (max-width: 768px) {
+  .pork-hero {
+    /* allow it to shrink but keep it tall */
+    height: auto;
+    min-height: 60vh;
+  }
+  .pork-hero .hero-overlay {
+    /* keep overlay full */
+    position: absolute;
+    inset: 0;
+  }
+  .pork-hero .hero-content {
+    /* flow into normal document flow */
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 2rem 1rem;
+    max-width: 100%;
+  }
+  .pork-hero .hero-content h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+  .pork-hero .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  .pork-hero .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .pork-hero .hero-content .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
