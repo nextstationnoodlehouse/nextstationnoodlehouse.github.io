@@ -607,12 +607,22 @@ html, body { overflow-x: hidden; }
   margin-bottom: 2rem;
 }
 
-/* at the bottom of styles.css */
+/*────────────────────────────────────────
+  9.1) CENTER FOOTER COLUMNS
+────────────────────────────────────────*/
 .footer-top.grid-3 {
-  display: grid;                        /* ensure grid */
-  grid-template-columns: repeat(3, 1fr);/* three equal columns */
-  gap: 2rem;                            /* same as your other grids */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  /* center each column’s content */
+  justify-items: center;
 }
+
+.footer-top.grid-3 > div {
+  /* ensure all text in each column is centered */
+  text-align: center;
+}
+
 /* Pop-out hover effect for product cards */
 .product {
   /* make sure transitions are smooth */
