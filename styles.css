@@ -358,6 +358,30 @@ footer a {
   .grid-4 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }
+    /* …your existing mobile rules… */
+
+  /*────────────────────────────────────────
+     FEATURED PRODUCTS → SWIPE CAROUSEL
+  ────────────────────────────────────────*/
+  .featured-products .grid-4 {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .featured-products .product {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    margin-right: 1rem;
+  }
+
+  .featured-products .grid-4::-webkit-scrollbar {
+    display: none;
+  }
+}
   .flex { flex-direction: column; }
   .product img { max-width: 100%; height: auto; }
   .video blockquote { min-width: 0 !important; }
