@@ -573,7 +573,6 @@ html, body { overflow-x: hidden; }
 .locations h2 {
   text-align: center;
   color: var(--primary);
-  padding: 4rem 0;
   margin-bottom: 0.5rem;
 }
 
