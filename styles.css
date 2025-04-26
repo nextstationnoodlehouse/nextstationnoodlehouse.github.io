@@ -576,11 +576,13 @@ html, body { overflow-x: hidden; }
   margin-bottom: 0.5rem;
 }
 
-.locations h4 {
+/* only style the top-level subtitle “Outlets” */
+.locations > h4 {
   text-align: center;
   color: var(--primary);
   margin-bottom: 2rem;
 }
+
 
 
 
