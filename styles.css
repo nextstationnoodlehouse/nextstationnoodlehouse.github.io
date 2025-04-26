@@ -560,3 +560,25 @@ html, body { overflow-x: hidden; }
   font-size: 1.1rem;
   color: var(--dark);
 }
+
+.locations {
+  background: var(--light);
+  color: var(--dark);
+  padding: 4rem 0;
+}
+
+/*────────────────────────────────────────
+  8.1) LOCATIONS HEADER
+────────────────────────────────────────*/
+.locations h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.locations h4 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
