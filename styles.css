@@ -589,6 +589,18 @@ html, body { overflow-x: hidden; }
   grid-template-columns: repeat(3, 1fr);/* three equal columns */
   gap: 2rem;                            /* same as your other grids */
 }
+/* Pop-out hover effect for product cards */
+.product {
+  /* make sure transitions are smooth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  /* lift & scale slightly */
+  transform: translateY(-8px) scale(1.03);
+  /* deepen the shadow */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
 
 
 
