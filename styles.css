@@ -438,3 +438,15 @@ footer {
   border-top: 1px solid #444;
   font-size: .9rem;
 }
+
+/* Make all footer links white, including visited */
+footer a:link,
+footer a:visited {
+  color: var(--light);
+}
+
+/* Optional: hover state stays gold */
+footer a:hover,
+footer a:active {
+  color: var(--primary);
+}
