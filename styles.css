@@ -467,3 +467,22 @@ footer .footer-top a,
 footer .footer-top a:visited {
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  /* make the nav take all available space next to the logo */
+  nav {
+    flex: 1 1 100%;
+  }
+
+  /* distribute the list items evenly */
+  nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  /* optional: tighten up vertical padding a bit */
+  .header-inner {
+    padding: 0.5rem 1rem;
+  }
+}
