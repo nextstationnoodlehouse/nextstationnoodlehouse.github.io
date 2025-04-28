@@ -286,7 +286,8 @@ nav a:hover { color: var(--primary); }
   margin-bottom: 2rem;
   color: var(--primary);
 }
-.grid-4 {
+/* 6) FEATURED PRODUCTS */
+.featured-products .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
@@ -449,4 +450,20 @@ footer a:visited {
 footer a:hover,
 footer a:active {
   color: var(--primary);
+}
+
+/* FOOTER: remove bullets + underlines */
+footer .footer-top ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer .footer-top li {
+  margin-bottom: 0.5rem; /* optional spacing between items */
+}
+
+footer .footer-top a,
+footer .footer-top a:visited {
+  text-decoration: none;
 }
