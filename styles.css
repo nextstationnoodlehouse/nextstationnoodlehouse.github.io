@@ -72,6 +72,35 @@ nav a {
 nav a:hover { color: var(--primary); }
 
 /*────────────────────────────────────────
+  GRABFOOD LOGO IN NAV
+────────────────────────────────────────*/
+nav ul li.nav-grab {
+  /* keep it the same flex behavior as your other li’s */
+  flex: 0 0 auto;
+  margin-left: 1rem;      /* small gap after “LOCATIONS” */
+}
+
+nav ul li.nav-grab a {
+  display: inline-block;  /* so padding (if any) applies */
+  padding: 0.25rem 0.5rem; /* match your mobile link padding */
+}
+
+nav ul li.nav-grab img {
+  height: 1em;            /* scale to your nav font-size */
+  width: auto;
+  vertical-align: middle; /* align with text baseline */
+  display: inline-block;
+}
+
+/* Mobile override: keep icon sized for smaller nav */
+@media (max-width: 768px) {
+  nav ul li.nav-grab img {
+    height: 1em;          /* same as desktop—nav font is already 0.9rem */
+  }
+}
+
+
+/*────────────────────────────────────────
   2) HERO VIDEO
 ────────────────────────────────────────*/
 .hero {
