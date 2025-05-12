@@ -513,3 +513,25 @@ nav ul li.nav-grab img {
   height: 1rem !important;   /* matches nav text exactly */
 }
 
+/*────────────────────────────────────────
+   NAV ALIGN FIX FOR GRABFOOD
+────────────────────────────────────────*/
+
+/* 1) Ensure the UL itself centers all its children: */
+nav ul {
+  align-items: center;    /* flex container will vertically center li’s */
+}
+
+/* 2) Make the Grab link a flexbox too, and remove extra vertical padding: */
+nav ul li.nav-grab a {
+  display: inline-flex;
+  align-items: center;    /* center the img within the link */
+  padding: 0;             /* ditch the top/bottom padding so heights match */
+}
+
+/* 3) Tweak the logo size to match text line-height: */
+nav ul li.nav-grab img {
+  height: 1em;            /* same as nav font-size */
+  width: auto;
+  margin: 0 0 0 .25rem;   /* a little left gap if you like */
+}
