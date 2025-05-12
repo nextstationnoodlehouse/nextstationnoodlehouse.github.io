@@ -508,3 +508,8 @@ footer .footer-top a:visited {
     padding: 0.5rem 1rem;
   }
 }
+
+nav ul li.nav-grab img {
+  height: 1rem !important;   /* matches nav text exactly */
+}
+
